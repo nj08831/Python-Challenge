@@ -1,14 +1,12 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[3]:
-
 
 import os
 import csv
 
-bankdata = os.path.join("../", "RUTGERS",'budget_data.csv')
-#.../
+bankdata = os.path.join('budget_data.csv')
+
 
 with open(bankdata, 'r') as bank_data:
     # Split the data on commas
@@ -126,29 +124,3 @@ output_file.close() #to change file access modes
  #[('a','apple'),('b','ball')
     
         
-   
-  
-    
-         
-        
-        
-   
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
