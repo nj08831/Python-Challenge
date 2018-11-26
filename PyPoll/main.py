@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-
 import os
 import csv
 
@@ -40,23 +39,23 @@ with open(input_file, 'r') as election_data:
     output = (
         f' \n '
         f'Election Results \n '
-        f'---------------------------------------- \n '
+        f'----------------------------------------------- \n '
         f' \n '
         f'Total Votes: \t {"{:,}".format(len(unique_voter_ids))} \n '
     #print(len(voter_id))
-        f'---------------------------------------- \n '
+        f'----------------------------------------------- \n '
         f' \n '
-        "{0:<10} {1:>15}\n".format("Candidates","Total Votes" )
+        "{0:<10} {1:>15} {2:>20} \n".format("Candidates","Total Votes","% of Total Votes" )
      )
     #print(f'{key} \t \t {value}')
     
     output2 = (
         f' \n '
-        f'----------------------------------------\n '
+        f'-----------------------------------------------\n '
         f'  \n '
         f'Winner: \t {winner_name}\n '
         f'   \n '
-        f'----------------------------------------\n '
+        f'-----------------------------------------------\n '
         f'   \n'
         f'   \n'
         f'Source file: /PyPoll/main.py \n'
@@ -66,14 +65,16 @@ with open(input_file, 'r') as election_data:
 # Print all of the results (to terminal)
     print(output)
     for key,value in cnt.items():
-        print(" {0:<10} {1:>15}".format(key,"{:,}".format(value)))
+        perc_tot = value / (len(unique_voter_ids))
+        print(" {0:<10} {1:>15}".format(key,"{:,}".format(value)) + f" {perc_tot:>20.1%}".format(perc_tot))
     print(output2)
 
 # Save the results to text file
     with open("PyPoll_Results.txt", "w") as txt_file:
         txt_file.write(output)
         for key,value in cnt.items():
-            txt_file.write(" {0:<10} {1:>15}\n".format(key,"{:,}".format(value)))
+            perc_tot = value / (len(unique_voter_ids))
+            txt_file.write(" {0:<10} {1:>15}".format(key,"{:,}".format(value)) + f" {perc_tot:>20.1%} \n".format(perc_tot))
         txt_file.write(output2)
         txt_file.close()
     
@@ -85,7 +86,4 @@ with open(input_file, 'r') as election_data:
     #print(len(candidates))
     #check each list inputed
     #print(voter_id[4:7],county[4:7],candidates[4:7])
-
-
-
-
+   
