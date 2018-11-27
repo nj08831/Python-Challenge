@@ -1,13 +1,13 @@
-                
 Financial Analyses 
------------------------------            
+----------------------------- 
+          
 Total Months: 86 
 Total Net Amount (Profit/Loss): $38,382,578 
 Average Month over Month change (Profit/Loss) is: -$2,315 
-Greatest Increase in Profits occurred Jan-12 in the amount of:  $1,926,159 
-Greatest Decrease in Profits occurred Aug-13 in the amount of: -$2,196,167 
+Greatest Increase in Profits occurred February 2012 in the amount of:  $1,926,159 
+Greatest Decrease in Profits occurred September 2013 in the amount of: -$2,196,167 
                 
                 
                 
-source:     PyBank.py 
-programmer: Dee Ann Belsky 
+Source: /PyBank/main.py 
+Owner:  Dee Ann Belsky 
