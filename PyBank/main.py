@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[33]:
-
-
 import os
 import csv
 
@@ -129,31 +126,3 @@ with open(bankdata, 'r') as bank_data:
  #[('a','apple'),('b','ball')
  #oldformat = datetime.strptime(max_key,'%b-%y')
  #newformat = oldformat.strftime('%B %Y')
-    
-        
-   
-  
-    
-         
-        
-        
-   
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
